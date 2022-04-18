@@ -1,0 +1,87 @@
+.sideMenu{
+	width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: ease-in-out 0.3s;
+    z-index: 3;
+    background-color: color(50);
+    padding-top: 100px;
+    &.open {
+      left: 0;
+    }
+    ul{
+        overflow-y: auto; height: 100%;padding-top:45px;
+        li:not(:last-child){margin-bottom:2px;}
+    }
+
+    &__link{
+        color:color(200); padding:25px 15px 25px 40px;display: block;
+        position: relative;font-family:font(sm);
+        display: flex;align-items: center;
+        i{margin-right:15px; min-width: 24px; font-size: 20px; }
+        &:before{
+            content:""; background-color:color(500); height: 100%; width:0;
+            position: absolute;left: 0;top:0;z-index:-1; border-radius: 0 3px 3px 0;
+            transition:width 0.5s;
+        }
+        &:hover, &.active{
+            color:color(50); 
+            &:before{width:calc(100% - 30px);}
+            path, rect{ fill:color(50); } 
+        }
+    }
+
+    @media (max-width: 1599px){
+        width: 260px;padding-top:70px;
+        ul{padding-top:15px;}
+        &__link{
+                padding: 12px 15px 12px 20px;
+                font-size: 14px;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        left: -370px;
+        z-index: 5;
+        padding-top: 70px;
+        ul{
+            padding-top: 10px;
+            .logo{
+                img{
+                    margin-left: 20px;
+                    height: 60px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+       &__link{
+            display: flex;
+            padding: 10px 22px 10px 20px;
+            align-items: center;
+            svg{
+                margin-right: 15px;
+            }
+       }
+    }
+    @include media-breakpoint-down(md) {
+        padding-top: 60px;
+        ul{
+            .logo{
+                img{
+                    height: 50px;
+                }
+            }
+        }   
+    }
+    @include media-breakpoint-down(xs){
+        padding-top: 58px;
+        ul{
+            .logo{
+                img{
+                    height: 50px;
+                }
+            } 
+        }
+    }
+}

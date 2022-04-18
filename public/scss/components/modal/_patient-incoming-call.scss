@@ -1,0 +1,12 @@
+.incomingCall{
+  .modal-dialog{max-width:360px;}
+  img{height: 110px; width: 110px;}
+  .btnRow{
+    a{height: 60px; width: 60px; color:color(50); font-size:24px; @include flexcenter(); background-color:color(600); border-radius:50%;
+      &:hover{background-color:darken(color(600), 7%);}
+      + a{background-color:color(500); margin-left: 40px;
+          &:hover{background-color:darken(color(500), 7%);}
+      }
+    }
+  }
+}

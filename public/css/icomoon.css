@@ -1,0 +1,234 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?m1lmqn');
+  src:  url('../fonts/icomoon.eot?m1lmqn#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?m1lmqn') format('truetype'),
+    url('../fonts/icomoon.woff?m1lmqn') format('woff'),
+    url('../fonts/icomoon.svg?m1lmqn#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-maximize:before {
+  content: "\e944";
+}
+.icon-log-out:before {
+  content: "\e942";
+}
+.icon-account:before {
+  content: "\e943";
+}
+.icon-mic:before {
+  content: "\e93a";
+}
+.icon-map-pin:before {
+  content: "\e93b";
+}
+.icon-mic-off:before {
+  content: "\e93c";
+}
+.icon-phone-call:before {
+  content: "\e93d";
+}
+.icon-phone-down:before {
+  content: "\e93e";
+}
+.icon-push:before {
+  content: "\e93f";
+}
+.icon-video-off:before {
+  content: "\e940";
+}
+.icon-video-play:before {
+  content: "\e941";
+}
+.icon-earning:before {
+  content: "\e933";
+}
+.icon-money:before {
+  content: "\e934";
+}
+.icon-chat-circle:before {
+  content: "\e935";
+}
+.icon-message-square:before {
+  content: "\e936";
+}
+.icon-star:before {
+  content: "\e937";
+}
+.icon-user:before {
+  content: "\e938";
+}
+.icon-video:before {
+  content: "\e939";
+}
+.icon-comment:before {
+  content: "\e928";
+}
+.icon-heart:before {
+  content: "\e929";
+}
+.icon-share:before {
+  content: "\e92a";
+}
+.icon-right-arrow:before {
+  content: "\e927";
+}
+.icon-export01:before {
+  content: "\e92b";
+}
+.icon-export:before {
+  content: "\e92c";
+}
+.icon-cms01:before {
+  content: "\e92d";
+}
+.icon-cms:before {
+  content: "\e92e";
+}
+.icon-spccialty01:before {
+  content: "\e92f";
+}
+.icon-specialty:before {
+  content: "\e930";
+}
+.icon-report:before {
+  content: "\e931";
+}
+.icon-commission:before {
+  content: "\e932";
+}
+.icon-appointment01:before {
+  content: "\e924";
+}
+.icon-feeds:before {
+  content: "\e925";
+}
+.icon-more:before {
+  content: "\e926";
+}
+.icon-dashboard01:before {
+  content: "\e91f";
+}
+.icon-communities:before {
+  content: "\e920";
+}
+.icon-newspaper:before {
+  content: "\e921";
+}
+.icon-corporate01:before {
+  content: "\e922";
+}
+.icon-appointment:before {
+  content: "\e923";
+}
+.icon-check1:before {
+  content: "\e901";
+}
+.icon-trash-2:before {
+  content: "\e902";
+}
+.icon-eye:before {
+  content: "\e903";
+}
+.icon-clock:before {
+  content: "\e905";
+}
+.icon-calendar:before {
+  content: "\e906";
+}
+.icon-chat:before {
+  content: "\e908";
+}
+.icon-corporate:before {
+  content: "\e90a";
+}
+.icon-country:before {
+  content: "\e90b";
+}
+.icon-dashboard:before {
+  content: "\e90d";
+}
+.icon-doctor:before {
+  content: "\e90e";
+}
+.icon-news:before {
+  content: "\e910";
+}
+.icon-notification:before {
+  content: "\e912";
+}
+.icon-package:before {
+  content: "\e913";
+}
+.icon-patient:before {
+  content: "\e915";
+}
+.icon-subadmin:before {
+  content: "\e91c";
+}
+.icon-bars:before {
+  content: "\e91d";
+}
+.icon-close:before {
+  content: "\e900";
+}
+.icon-camera:before {
+  content: "\e904";
+}
+.icon-email:before {
+  content: "\e907";
+}
+.icon-move:before {
+  content: "\e909";
+}
+.icon-phone:before {
+  content: "\e90c";
+}
+.icon-refresh:before {
+  content: "\e90f";
+}
+.icon-search:before {
+  content: "\e911";
+}
+.icon-edit:before {
+  content: "\e914";
+}
+.icon-bar:before {
+  content: "\e916";
+}
+.icon-filter:before {
+  content: "\e91e";
+}
+.icon-check:before {
+  content: "\e917";
+}
+.icon-chevron-up:before {
+  content: "\e918";
+}
+.icon-chevron-down:before {
+  content: "\e919";
+}
+.icon-chevron-left:before {
+  content: "\e91a";
+}
+.icon-chevron-right:before {
+  content: "\e91b";
+}

@@ -1,0 +1,89 @@
+.btn {
+  cursor: pointer;
+  border-radius:3px;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  line-height: normal;
+  text-transform: capitalize;
+  &:focus {
+    box-shadow: none;
+  }
+  &.btn-sm {height: 45px; font-size: 16px; padding: 10px 25px; }
+  &.btn-lg { height: 55px; font-size: 22px;padding: 10px 40px; }
+  &:not(:disabled):not(.disabled).active:focus,
+  &:not(:disabled):not(.disabled):active:focus,
+  .show > &.dropdown-toggle:focus {box-shadow: none;}
+  &.btn-danger {
+    border-color: color(500);
+    color: color(50);
+    background-color: color(500);
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active {
+      border-color: darken(color(500), 6%);
+      background: darken(color(500), 6%);
+      color: color(50);
+    }
+  }
+  &.btn-secondary{
+    border-color: #D0D0D1;
+    color: color(50);
+    background-color: #D0D0D1;
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active {
+      border-color: darken(#D0D0D1, 6%);
+      background: darken(#D0D0D1, 6%);
+      color: color(50);
+    }
+  }
+  &.btn-outline-secondary {
+    border-color: #EBEBF3;
+    color: color(100);
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active {
+      border-color: darken(color(100), 6%);
+      background: darken(color(100), 6%);
+      color: color(50);
+    }
+  }
+  &.btn-danger-secondary {
+    border-color: color(500);
+    color: color(500);
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active {
+      background: color(500);
+      color: color(50);
+    }
+  }
+  &.w-120{min-width: 120px;}
+
+  @media (max-width: 1599px){
+    &.btn-lg{
+      height: 45px;font-size: 20px;padding: 6px 40px;
+    }
+    &.btn-sm{font-size: 15px; height: 40px;}
+  }
+
+  @include media-breakpoint-down(lg) {
+    &.btn-sm{font-size: 14px;}
+    &.btn-lg{
+     font-size: 18px;padding: 4px 25px; height: 40px;
+    }
+    
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+    &.btn-sm{height:35px; font-size: 13px; padding:6px 15px;}
+     &.btn-lg{font-size: 15px;  padding-left:20px; padding-right:20px;}
+  }
+
+  
+}

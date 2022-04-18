@@ -1,0 +1,22 @@
+.commondocList{
+  li{
+    padding-left: 20px;padding-right: 20px;
+    .left{
+      position: relative; padding-left: 48px;
+      img{position: absolute; left: 0; width: 26px; top: 0;}
+      h4{font-size:16px; margin: 0;}
+      span{font-size:12px; color:color(200);}
+    }
+    .right{
+      a{color:color(100); font-size:20px;
+        &:not(:last-child){
+          margin-right: 15px;
+        }
+        &:hover{color:color(500);}
+      }
+    }
+    &:not(:last-child){
+      border-bottom: 1px solid #EFEFEF; padding-bottom: 15px;margin-bottom: 20px;
+    }
+  }
+}

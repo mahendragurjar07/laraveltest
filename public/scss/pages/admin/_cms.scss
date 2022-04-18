@@ -1,0 +1,146 @@
+.cmsPage{
+	.cmsTable{
+		padding:0 25px;
+		td{
+			background-color: color(50); border-top:0; border-top:1px solid #E5E5E5; padding:20px 0;
+			white-space: nowrap; vertical-align: middle;
+			p{
+				color:color(200); font-family: font(md);display: flex;align-items: center;
+				i{font-size: 33px;margin-right: 30px;}
+			}
+			.btn{min-width: 120px; + .btn{margin-left: 20px;}}
+		}
+
+		@media (max-width: 1599px){
+			td{
+				padding:20px 0;
+				.btn{min-width: 110px;}
+				p i{margin-right: 15px;}
+			}
+		}
+		@include media-breakpoint-down(md) {
+			td{
+				padding:15px 0;
+				.btn{min-width: 90px; + .btn{margin-left: 10px;}}
+				
+			}
+		}
+
+		@include media-breakpoint-down(xs) {
+			padding:0;
+			td{padding:15px; p i{font-size: 26px;margin-right: 10px;}}
+			.btn{min-width: 70px; }
+		}
+	}
+	.Content{
+		padding:20px;
+		p{color:#757575; font-family: font(md);}
+		input{
+			border:1px dashed #707070; border-bottom: 0; padding:20px 25px;color:#474747; width: 100%; 
+			font-size: 18px;font-family: font(md);
+		}
+		.faq-textarea{
+			line-height: 30px; font-weight: 600; color:#757575;font-family: font(rg);height:calc(100vh - 450px);
+		}
+		textarea{
+			border:1px dashed #707070; padding:20px 25px;color:#474747;font-family: font(md); height:calc(100vh - 380px);
+			width: 100%; resize: none;
+		}
+
+		.btn-danger{min-width: 220px;}
+		.cancel-btn{
+			font:20px font(md);color:color(500); margin-left: 30px; 
+			&:hover{color:lighten(color(500), 20%);}
+		}
+
+		.accordion{
+			.card{
+				border-left:0;border-right:0;padding:30px 0;border-color:#E5E5E5;
+				&:first-child{border-top:0; padding-top: 10px;}
+				&:last-child{border-bottom:0; padding-bottom:10px;}
+				.card-header{
+					background-color: transparent;border-bottom:0;padding:0;padding-right: 70px;
+					position: relative;
+					button{
+						font-family: font(md);color:#3B3B3B; padding:0; font-size: 18px; text-decoration: none;
+						line-height: 24px;
+						text-align: left;
+						&:hover{color:color(500);}
+						
+					}
+					[aria-expanded="true"]{
+						~ .action{
+							.edit-btn{display: block;}
+							.move-btn{display: none;}
+						}
+					}
+					[aria-expanded="false"]{
+						~ .action{
+							.edit-btn{display: none;}
+							.move-btn{display: block;}
+						}
+					}
+					.action{
+						@include absolutecenter(y); right:20px;z-index: 1040;
+						.edit-btn{
+							font-family: font(md);color:color(500);line-height: normal;vertical-align: 2px;
+							&:hover{color:lighten(color(500), 10%);}
+						}
+						.move-btn{font-size: 26px;color:rgba(#3B3B3B, 0.5); cursor:move;}
+					}
+				}
+				.card-body{padding:15px 0 0; line-height: 30px; font-weight: 600; color:#757575;}
+			}
+		}
+
+		@media (max-width: 1599px) {
+			textarea, input{padding:15px;}
+			textarea{height:calc(100vh - 340px);}
+			.faq-textarea{height:calc(100vh - 400px);}
+			.btn-danger{min-width: 160px;}
+			.cancel-btn{margin-left: 20px;font-size: 18px;}
+			.accordion{
+				.card{
+					padding: 20px 0;
+					.card-header {
+						padding-right: 60px;
+						button{font-size: 16px;line-height: normal;}
+						.action .move-btn{font-size: 22px;}
+					}
+					.card-body{font-size: 15px;line-height: 26px;}
+				}
+			}
+		}
+
+		@include media-breakpoint-down(lg) {
+			input{font-size: 16px;}
+			textarea{height:calc(100vh - 290px);}
+			.faq-textarea{height:calc(100vh - 345px);}
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding:15px;
+			textarea, input{padding:10px;}
+			input{font-size: 14px;}
+			textarea{height:calc(100vh - 260px);}
+			.faq-textarea{height:calc(100vh - 300px);}
+			.btn-danger{min-width: 140px;}
+			.cancel-btn{margin-left: 10px;font-size: 16px;}
+			.accordion{
+				.card{
+					padding: 15px 0;
+					.card-header {
+						button{font-size: 14px;}
+					}
+					.card-body{font-size: 13px; line-height: 24px;}
+				}
+			}
+		}
+		@include media-breakpoint-down(xs) {
+			textarea{height:calc(100vh - 260px);}
+			.faq-textarea{height:calc(100vh - 300px);}
+			.btn-danger{min-width: 100px;}
+			.cancel-btn{font-size: 14px;}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+// layout
+@import 'layout/layout.admin-header';
+@import 'layout/layout.admin-sidemenu';
+
+
+
+// components
+@import 'components.button';
+@import 'components.switches';
+@import 'components.common-table';
+@import 'components.admin-pagetitle';
+@import 'components.pagination';
+@import 'components.form';
+@import 'components.bootstrap-select';
+@import 'components.admin-filter';
+@import 'components.common-tabs';
+@import 'components.jqueryui-datepicker.scss';
+@import 'components.document-list';
+@import 'components.doctor-list';
+@import 'components.news-list';
+
+
+
+
+//modal
+@import 'modal/modal-main';

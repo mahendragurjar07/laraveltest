@@ -1,0 +1,17 @@
+.modal{
+  &.paymentOption{
+    .form-group{
+      .custom-radio{
+        padding-left: 45px;
+        .custom-control-label{padding: 0; margin: 0;
+          &:before{height: 25px;width: 25px;}
+          &:after{width: 15px;height: 15px;left: 5px;top: 6px;}
+        }
+      }
+    }
+    p{font-size:14px; line-height:30px; color: #434343; margin-bottom: 0; font-family:font(sm);}
+    h4{color:color(900);}
+    .btn{width: 300px;}
+    h2{font-size:26px; margin: 15px 0;}
+  }
+}

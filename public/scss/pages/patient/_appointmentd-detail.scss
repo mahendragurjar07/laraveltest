@@ -1,0 +1,75 @@
+.appointmentDetail{
+	&__left{
+		&__top{margin-bottom: 25px;}
+		img{height: 100px; width: 100px; margin-bottom: 15px;}
+		h4{font-size: 20px;}
+		.rating{
+			i{color:rgba(color(700),0.3);
+				&.active{color:color(700);}
+			}
+			span{font-size:13px; margin-left: 5px; display: inline-block;}
+		}
+		h3{font-size:16px;margin-bottom: 15px;}
+		h5{font-size:14px;}
+		ul{
+			li{
+				display: flex; font-family:font(sm);
+				span{color:color(100); width: 115px;}
+				&:not(:last-child){margin-bottom: 15px;}
+			}
+		}
+		p{color: #333247;}
+		.patientBox{
+			padding-left: 88px; position: relative; min-height:68px; padding-top: 5px; margin: 20px 0;
+			img{position: absolute; left: 0; height: 68px;width: 68px; top: 0; margin: 0;}
+			h4{margin-bottom: 4px;}
+		}
+		.btnRow{
+			.btn{min-width:195px;}
+		}
+	}
+
+	@media (max-width:1599px){
+		&__left{
+			padding: 25px;
+			h4{font-size: 18px;}
+			ul{
+				li{font-size:15px;
+					span{ width:90px;}
+				}
+			}
+		}
+	}
+	@media (max-width: 1599px) and (min-width: 1280px){
+		.col-sm-3.left-col{
+		    -ms-flex: 0 0 33.33%;
+		    flex: 0 0 33.33%;
+		    max-width: 33.33%;
+		}
+		.col-sm-9.right-col{
+		    -ms-flex: 0 0 66.66%;
+		    flex: 0 0 66.66%;
+		    max-width: 66.66%;
+		}
+	}
+	@media (max-width:1399px){
+		&__left{
+			&__top{margin-bottom: 20px;}
+			img{height: 80px; width: 80px;}
+			h4{font-size: 16px;}
+			h3{font-size:15px;}
+			ul{
+				li{font-size:13px;
+					span{width: 75px;}
+					&:not(:last-child){margin-bottom: 10px;}
+				}
+			}
+			.mb-30{margin-bottom: 20px;}
+			.patientBox{
+				padding-left: 65px; min-height:50px; padding-top: 0px; margin: 15px 0;
+				img{ height: 50px;width: 50px;}
+			}
+			p{font-size:14px;}
+		}
+	}
+}

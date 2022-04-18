@@ -1,0 +1,33 @@
+
+// tools
+@import 'tools/tools.mixin';
+
+// settings
+@import 'settings/settings.main';
+
+// elements
+@import 'elements/elements.html'; 
+
+// object
+@import 'objects/objects.html';
+
+
+// components
+@import 'components/components.main'; 
+
+// utilities
+@import 'utilities/utilities.main';
+
+
+
+
+
+// admin css start
+@import 'pages/admin/login';
+@import 'pages/admin/dashboard';
+@import 'pages/admin/manage-subadmin';
+@import 'pages/admin/view-news';
+@import 'pages/admin/change-password';
+@import 'pages/admin/cms';
+@import 'pages/admin/add-feed';
+@import 'pages/admin/patient-detail';

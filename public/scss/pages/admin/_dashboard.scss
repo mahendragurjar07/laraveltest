@@ -1,0 +1,132 @@
+.dashboardPage{
+	.reportCard { 
+	    border: none; border-radius: 3px;box-shadow: 0 0 20px rgba(41,41,41,0.07);
+	    margin-bottom: 30px;
+	    .card-body{padding:40px 20px;}
+	    &__left {
+	      margin-right: 30px;
+	      i{font-size: 45px;color: color(500);}
+	    }
+	    &__count {
+	      font-size: 36px;margin-top: 5px; margin-bottom: 0; line-height: 35px; font-family: font(bd);
+	    }
+	    &__title {
+	      font-size: 16px;   font-family: font(sm);
+	    }
+	}
+
+	// revenue and doctor list
+	.revenueAndDoctorList{
+		.reveueChart, .doctorList{border-radius: 3px;}
+		.doctorList{ 
+			.commonTable{max-height: 490px; overflow-y: auto;}
+		}
+		.reveueChart{
+			h3{font-size: 22px; font-family: font(sm); }
+			.bootstrap-select {
+				width: 120px;
+		      .dropdown-toggle {
+		        height: 35px;
+		        padding:6px  10px ;
+		        padding-right: 26px;
+		        font-size: 14px;
+		        border-color: #d6d6d6 !important;
+		        text-transform: capitalize;
+		        background-color: color(50) !important;
+		        border-radius: 3px;
+		        &:after {
+		          right: 5px;
+		        }
+		      }
+		      .dropdown-menu {
+		        .inner {
+		          li {
+		            a {
+		              padding: 5px 10px;
+		            }
+		          }
+		        }
+		      }
+		      &.show{
+		        .dropdown-toggle {
+		          &.btn-light {
+		            border-color: color(500) !important;
+		          }
+		        }
+		      }
+		    }
+		}
+	}
+
+
+
+	@media(max-width:1599px){
+		.revenueAndDoctorList{
+			.reveueChart{ 
+				h3{font-size: 18px; margin-bottom: 6px;}
+				.bootstrap-select {width: 95px;}
+				.chartjs-render-monitor{height: 455px !important;} }
+			}
+		
+
+		.totalRow{
+			.row{
+				margin-right:-10px;margin-left:-10px;
+				> .col,	> [class*="col-"]{padding-right:10px;padding-left:10px}
+			}
+		}
+		.reportCard{
+			margin-bottom:20px;
+			.card-body{padding:30px 15px;}
+			&__left {
+		      margin-right: 15px;
+		      i{font-size: 35px;}
+		    }
+		    &__count {font-size: 28px;line-height: 22px;}
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		.revenueAndDoctorList{
+			.reveueChart, .doctorList{h5{font-size: 18px;}}
+			.doctorList{ 
+				.commonTable{max-height:380px; overflow-y: auto;}
+			}
+			.reveueChart{
+				.chartjs-render-monitor{height: 345px !important;} 
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		.revenueAndDoctorList{
+			.doctorList{
+				margin-top: 20px;
+			}
+		}
+		.reportCard{
+			.card-body{padding:25px 15px;}
+			&__left {
+		      i{font-size: 32px;}
+		    }
+		    &__count {font-size: 26px;line-height: 22px;}
+		}
+	}
+
+	@include media-breakpoint-down(xs) {
+		.reportCard{
+			margin-bottom: 15px;
+			&__left {
+		      i{font-size: 28px;}
+		    }
+		    &__count {font-size: 22px;}
+		}
+		.revenueAndDoctorList{
+			.reveueChart .bootstrap-select{width: 110px;}
+			.reveueChart{
+				overflow-x: auto;
+				&__inner{ width: 600px;}
+			}
+		}
+	}
+}

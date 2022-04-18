@@ -1,0 +1,139 @@
+.feedsDatailPage{
+
+	&__row{
+		margin-right: -25px;margin-left: -25px;
+		> .col, > [class*="col-"]{padding-right: 25px;padding-left: 25px;}
+	}
+
+	.feed{
+		&__box{padding: 20px;}
+		&__image{
+			margin-bottom: 25px;
+			img{width: 100%;}
+		}
+		&__imageBottom{
+			right: 0; bottom: 0; left: 0; padding: 25px;height: 230px;
+            background-image: -webkit-gradient(linear, left bottom, left bottom, from(transparent), to(rgba(color(900), .2)));
+            background-image: -webkit-linear-gradient(top, transparent, rgba(color(900), .2));
+            background-image: -o-linear-gradient(top, transparent, rgba(color(900), .2));
+            background-image: linear-gradient(to bottom, transparent, rgba(color(900), .2));
+            ul{
+            	li{
+            		text-align: right;
+            		&:not(:last-child){margin-bottom: 20px;}
+            		a{
+            			color: color(50);font-size: 17px;
+            			.icon{
+            				width: 54px;height: 54px;min-width: 54px;margin-left: 15px;
+            				background: rgba(color(50), .18);font-size: 20px;
+            			}
+            			&.active{
+            				.icon{color: color(500);}
+            			}
+            		}
+            	}
+            }
+		}
+		&__info{
+			margin-bottom: 25px;
+			.profile{
+				&__img{
+					width: 65px;height: 65px; 
+					img{width: 100%;height: 100%;}
+				}
+				&__caption{
+					margin-left: 10px;
+					h6{font-size: 22px; line-height: 22px; margin-bottom: 5px;}
+					h5{font-size: 17px; color:color(200);}
+				}
+			}
+			.right{
+				.btn{font-size: 20px;}
+			}
+		}
+		&__txt{font-size: 18px;line-height: 45px;margin-bottom: 15px;}
+		&__comment{
+			padding: 10px 20px;margin-bottom: 25px;
+			.commentImg{min-width: 40px;height: 40px;width: 40px;margin-right: 10px;}
+			textarea{
+				width: 100%;height: 40px;resize: none;padding: 5px 15px;font-size: 20px;
+			}
+		}
+		&__link{
+			color: color(100);font-size: 16px;@include transition(.3s);
+			&:hover, &:active, &:focus{color: color(500);}
+		}
+	}
+	
+	.commentList{
+		padding: 0 20px;margin-bottom: 10px;
+		&__img{min-width: 40px;height: 40px;width: 40px;margin-right: 20px;}
+		&__txt{
+			h5{margin-bottom: 5px;color: color(200);font-size: 18px;}
+			h6{font-size: 22px;}
+		}
+		ul{
+			li{
+				&:not(:last-child){margin-bottom: 25px;}
+			}
+		}
+	}
+	 
+
+	@media(max-width:1700px){
+		&__row{
+			margin-right: -15px;margin-left: -15px;
+			> .col, > [class*="col-"]{padding-right: 15px;padding-left: 15px;}
+		}
+		&__left{flex: 0 0 70%;max-width: 70%;}
+		&__right{flex: 0 0 30%;max-width: 30%;}
+	}
+
+	@media(max-width:1599px){
+		&__row{
+			margin-right: -10px;margin-left: -10px;
+			> .col, > [class*="col-"]{padding-right: 10px;padding-left: 10px;}
+		}
+
+		.feed{
+			&__imageBottom{
+				ul{
+					li{
+						a{
+							font-size: 16px;
+							.icon{width: 48px;min-width: 48px;height: 48px;font-size: 18px;}
+						}
+					}
+				}
+			}
+			&__info{
+				.profile{
+					&__caption{
+						h6{font-size: 20px;line-height: 20px;}
+						h5{font-size: 16px;}
+					}
+				}
+				.right{
+					.btn{font-size: 18px;}
+				}
+			}
+			&__txt{font-size: 16px;line-height: 36px;}
+			&__comment{
+				textarea{font-size: 18px;}
+			}
+		}
+
+		.commentList{
+			&__txt{
+				h5{font-size: 16px;}
+				h6{font-size: 18px;}
+			}
+		}
+	}
+
+	@media(max-width:1399px){
+		&__left{flex: 0 0 65%;max-width: 65%;}
+		&__right{flex: 0 0 35%;max-width: 35%;}
+	}
+
+}

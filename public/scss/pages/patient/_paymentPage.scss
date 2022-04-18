@@ -1,0 +1,51 @@
+.payment{
+	&__left{
+		padding: 20px;
+		h4{font-size:16px; margin-bottom: 30px;}
+		.custom-radio{
+			padding-left: 0;
+			&:not(:last-child){
+				border-bottom:2px solid #F7F8F9; margin-bottom: 30px; padding-bottom: 30px;
+			}
+			.custom-control-label{ position: relative;
+				padding-left: 55px; padding-right: 20px;
+				img{position: absolute; left: 0; top: 50%; transform:translate(0,-50%);}
+				h5{font-size:16px; font-family:font(sm); color:color(900)}
+				span{font-size:14px; margin: 0; color:color(100);}
+				&:after,&:before{
+					left: auto;right: 0;
+				}
+				&:after{right: 3px;}
+			}
+		}
+	}
+	&__right{
+		.cardNumber{
+			background-color:#F7F8F9; border-radius:4px; position: relative; overflow: hidden;
+			.form-control{border-radius:0; background:transparent; border:0;
+				&:not(:last-child){
+					background-image: url('../images/patient/slash.png'); background-repeat:no-repeat; background-position: center right;
+				}
+			}
+			span{position: relative;
+				&:not(:last-child){
+					&:after{
+						content:"/"; font-size: 15px; color:rgba(#CCCCCC,0.6); display: inline-block; position: absolute; right: 0;top:50%;transform: translate(0,-50%);
+					}
+				}
+			}
+		}
+	}
+	@media (min-width:1280px) and (max-width:1599px){
+		.col-md-3 {
+		    -ms-flex: 0 0 33.33%;
+		    flex: 0 0 33.33%;
+		    max-width: 33.33%;
+		}
+		.col-md-9 {
+		    -ms-flex: 0 0 66.66%;
+		    flex: 0 0 66.66%;
+		    max-width: 66.66%;
+		}
+	}
+}

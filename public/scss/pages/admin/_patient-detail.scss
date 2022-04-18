@@ -1,0 +1,202 @@
+.patientDetail{
+	.customRow{
+		.col-lg-4{flex:0 0 30%; max-width: 30%;}
+		.col-lg-8{flex:0 0 70%; max-width: 70%;}
+	}
+	.commonHeading{margin-bottom:20px;}
+
+
+	&__otherContent{
+		margin-top:30px;margin-bottom: 30px;
+		.commonInfo,{
+			display: -ms-flexbox;  display: flex;  -ms-flex-wrap: wrap;  flex-wrap: wrap;
+			margin:0 -5px;
+			label{
+				color:color(200); margin-bottom: 0; min-width: 120px; 
+				text-transform: capitalize; flex:0 0 45%; padding:0 5px;}
+			span, .mediaFile{font-family: font(sm); flex:0 0 55%; text-transform: capitalize;padding:0 5px;}
+			+ .commonInfo{margin-top: 6px;  border-top:1px solid #f2f2f2; padding-top: 6px;}
+			.mediaFile{
+				text-transform: inherit;color:color(900);
+				img{max-width: 30px; vertical-align: -8px;}
+				&:hover{color:lighten(color(900), 30%);}
+			}
+		}
+		
+		.card{border-top:3px solid color(500) !important; + .card{margin-top:15px;}}
+		.personal{
+			img{margin-bottom: 15px; width: 100px;height: 100px;}
+			h3{font-size: 20px; line-height: 22px; }
+			p{line-height: normal; margin-bottom: 20px;color:color(200);}
+		}
+	}
+
+	.personal {
+		border-top:3px solid color(500);
+		.profile {
+		    min-width: 200px;
+		    margin-right: 70px;
+		    &__img {
+		      height: 120px;
+		      width: 120px;
+		      border-radius: 50%;
+		      overflow: hidden;
+		      margin-bottom: 15px;
+		    }
+		    img {
+		      height: 100%;
+		      width: 100%;
+		    }
+		    &__name {
+		      font-size: 20px;
+		      font-family: font(sm);
+		    }
+		    span {
+		      color: color(150);
+		    }
+		}
+
+		.commonList {
+		  ul {
+		    margin: 0 -10px;
+		    li {
+		      width: 50%;
+		      padding: 0 10px;
+		      display: block;
+		      label {
+		        min-width: 115px;display: inline-block;
+		        color:color(200);text-transform: capitalize;
+		        &.min-w-auto {
+		          min-width: auto;
+		          margin-right: 10px;
+		        }
+		      }
+		      &:not(:last-child) {
+		        margin-right: 0;
+		        margin-bottom: 10px;
+		      }
+		      span {
+		        margin: 0;font: 14px font(sm);text-transform: capitalize;
+		      }
+		    }
+		    &.fullwidth {
+		      margin: 0;
+		      li {
+		        width: 100%;
+		        padding: 0;
+		      }
+		    }
+		  }
+		  @include media-breakpoint-down(lg) {
+		    ul {
+		      li {
+		        &:not(:last-child) {
+		          margin-right: 0;
+		          margin-bottom: 10px;
+		        }
+		      }
+		    }
+		  }
+		  @include media-breakpoint-down(md) {
+		    ul {
+		      li {
+		        font-size: 13px;
+		        label {
+		          min-width: 95px;
+		        }
+		      }
+		    }
+		  }
+		  @include media-breakpoint-down(sm) {
+		    ul {
+		      margin: 0;
+		      li {
+		        width: 100%;
+		        padding: 0;
+		        &:not(:last-child) {
+		          margin-bottom: 7px;
+		        }
+		      }
+		    }
+		  }
+		  @media (max-width: 480px) {
+		    ul {
+		      li {
+		        display: block;
+		        label {
+		          min-width: inherit;
+		          margin-bottom: 5px;
+		          display: block;
+		        }
+		      }
+		    }
+		  }
+		}
+
+		@media (max-width: 1440px) {
+		    .patientdetail {
+		      margin-right: 50px;
+		      min-width: 120px;
+		      &__img {
+		        height: 110px;
+		        width: 110px;
+		      }
+		      &__name {
+		        font-size: 18px;
+		      }
+		    }
+		}
+		@include media-breakpoint-down(lg) {
+		    padding: 20px;
+		    .patientdetail {
+		      margin-right: 30px;
+		      &__img {
+		        height: 100px;
+		        width: 100px;
+		      }
+		      &__name {
+		        font-size: 16px;
+		      }
+		    }
+		}
+		@include media-breakpoint-down(md) {
+		    .patientdetail {
+		      margin-right: 15px;
+		      min-width: 115px;
+		      &__img {
+		        height: 90px;
+		        width: 90px;
+		        margin-bottom: 10px;
+		      }
+		      &__name {
+		        font-size: 15px;
+		      }
+		    }
+		}
+		@include media-breakpoint-down(sm) {
+		    padding: 15px;
+		    .patientdetail {
+		      min-width: 100px;
+		      &__img {
+		        height: 80px;
+		        width: 80px;
+		      }
+		      &__name {
+		        font-size: 14px;
+		      }
+		    }
+	    }
+		@include media-breakpoint-down(xs) {
+		    .patientdetail {
+		      min-width: 100px;
+		      margin-right: 0;
+		      text-align: left;
+		      margin-bottom: 10px;
+		      &__img {
+		        margin: 0 0 10px;
+		      }
+		    }
+		}
+	}
+
+}

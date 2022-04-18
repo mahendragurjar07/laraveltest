@@ -1,0 +1,36 @@
+
+// tools
+@import 'tools/tools.mixin';
+
+// settings
+@import 'settings/settings.main';
+
+// elements
+@import 'elements/elements.html'; 
+
+// object
+@import 'objects/objects.html';
+
+
+// components
+@import 'components/components.main'; 
+
+// utilities
+@import 'utilities/utilities.main';
+
+
+
+
+
+// patient css start
+@import 'pages/patient/login';
+@import 'pages/patient/dashboardPage';
+@import 'pages/patient/doctorPage';
+@import 'pages/patient/feeds';
+@import 'pages/patient/doctorDetail';
+@import 'pages/patient/paymentPage';
+@import 'pages/patient/appointmentPage';
+@import 'pages/patient/appointmentd-detail';
+@import 'pages/patient/waiting-room';
+@import 'pages/patient/_audio-video-call';
+@import 'pages/patient/feeds-details';

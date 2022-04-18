@@ -1,0 +1,25 @@
+.commonTabs{
+	.tab-content{margin-top: 20px;}
+	// .filterBtn{
+	// 	width: 55px;height: 55px;background-color: color(80); text-align: center;color:color(500);
+	// 	padding:12px;font-size: 24px; border-radius: 5px; margin-right: 3px;
+	// 	&:hover{background-color: color(500); color:color(50);}
+	// }
+	.nav-link{
+		padding:18px 35px; font-family: font(bd); color:#292929; border-radius: 0;
+		position: relative;
+		&.active, &:hover{color:color(500); background-color: transparent;}
+		&.active{
+			&:before{
+				content: ""; border-top: 6px solid color(50); border-left: 6px solid transparent; 
+				bottom: -6px;border-right: 6px solid transparent; @include absolutecenter(x);
+			}
+		}
+	}
+	.nav-item + .nav-item{border-left:1px solid #F3F3F3;}
+	@media(max-width:1599px){
+		.nav-link{
+			padding:16px 32px;
+		}
+	}
+}

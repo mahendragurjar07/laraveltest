@@ -1,0 +1,12 @@
+.feedbackModal{
+  .modal-body{padding-left: 150px; padding-right: 150px;}
+  &__img{height: 70px; width: 70px; position: relative; border-radius:50%; margin-bottom: 15px;
+    img{height: 100%; width: 100%;}
+  }
+  .rating{margin: 15px 0;
+    i{font-size:38px; text-shadow:0 5px 10px rgba(0,0,0,0.4); color: rgba(color(500),0.5);
+      &:not(:last-child){margin-right: 10px;}
+      &.active{color:color(500);}
+    }
+  }
+}

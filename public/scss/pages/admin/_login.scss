@@ -1,0 +1,42 @@
+.loginPage{
+	&__inner{height: 100vh;}
+	&__box{
+		box-shadow: 0 0 20px rgba(#292929, 0.07);width: 520px;
+		padding:50px 80px;margin-top: 40px;
+		h1{font:26px font(bd); margin-bottom: 30px;}
+		.btn-danger{height: 60px;}
+		.link{
+			color:color(100);&:hover{color:color(500);}
+		}
+		.customRow{
+			margin-right: -4px; margin-left: -4px;
+		  > .col,  > [class*="col-"] {
+		    padding-right: 4px;
+		    padding-left: 4px;
+		  } 
+		}
+	}
+
+	@media (max-width: 1599px){
+		&__inner{img{max-width: 280px;}}
+		&__box{.btn-danger{height: 45px;}}
+	}
+
+	@include media-breakpoint-down(lg) {
+		&__inner{img{max-width: 250px;}}
+		&__box{width: 450px;padding:30px 50px;.btn-danger{height: 40px;}}
+	}
+
+	@media  (max-device-width: 568px) and (orientation: landscape) {
+		&__inner{height:100%; padding:20px 0;}
+	}
+
+	@include media-breakpoint-down(sm) {
+		&__inner{img{max-width: 210px;}}
+		&__box{
+			padding:20px; margin-top: 20px;width: auto;
+			h1{font-size:20px;margin-bottom: 20px;}
+		}
+	}
+
+}

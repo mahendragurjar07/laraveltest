@@ -1,0 +1,65 @@
+.pagination {
+    margin-bottom: 0;
+    .page-item{
+        display: flex; align-items: center;
+        &:not(:last-child){
+            margin-right:15px;
+        }
+        &:first-child{margin-right: 0;}
+        &.disabled{.page-link{color: rgba(color(100), 0.5);}}
+        &.active{
+            .page-link{background-color:color(500);color:color(50);}
+        }
+        .page-link{
+            padding:0;border:none;color:rgba(color(900), 0.5);background-color: transparent;
+            line-height: normal;font: 18px font(bd);text-align: center;min-width:35px;
+            height: 35px; display: flex;align-items:center;justify-content: center;
+            &:hover, &:focus, &.active{
+                background-color:color(500); color:color(50);box-shadow:none;
+            }
+        } 
+        &:first-child, &:last-child{
+            .page-link{
+                font-weight: bold;font-size: 22px;
+                &:hover, &:focus, &.active{
+                    background-color:transparent; color:color(500);
+                }
+            }
+        }
+
+    }
+}
+
+.paginationBottom{
+    margin-top: 30px;
+    .selectPages{
+        margin-left: 15px;background-color: #E6E6E6;font: 11px font(md);
+        padding:2px 7px;border:0;height:24px;
+    }
+}
+
+
+@media (max-width: 1599px) {
+    .paginationBottom{margin-top: 20px;}
+}
+
+@include media-breakpoint-down(lg) {
+    .pagination{
+        .page-item{
+            .page-link{min-width: 30px;height: 30px; font-size: 16px;}
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .pagination{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        .page-item{
+            &:not(:last-child){
+                margin-right:6px;
+            }
+        }
+    }
+}

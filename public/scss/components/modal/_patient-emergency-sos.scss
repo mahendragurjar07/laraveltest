@@ -1,0 +1,19 @@
+.emergencyModal{
+  .emergencyContect{
+    &__list{
+        padding: 0 35px;
+      &__left{padding-left: 80px; min-height:60px; padding-top: 5px;}
+      .userLatter{height: 60px; width: 60px; left: 0; top: 0; border-radius:50%; background-color:color(500); color:color(50); font-family:font(bd); font-size:20px;
+        img{height: 100%; width: 100%;}
+      }
+      h4{font-size:19px; margin-bottom: 3px;}
+      span{font-size:14px;}
+      &:not(:last-child){
+        border-bottom:2px solid #F7F8F9; padding-bottom: 20px; margin-bottom: 20px;
+      }
+      &__right{
+        a{font-size:20px;}
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.doctorCommon{
+  background: color(50); margin-bottom: 15px;
+    &__top{position: relative; min-height:50px; padding:15px 15px 15px 80px; min-height:48px;
+        .img{height: 48px;width: 48px;position: absolute;left: 15px;top: 15px;
+          img{height: 100%;width: 100%;}
+          .status{position: absolute;right: -2px;top: -2px;height: 17px;width: 17px;border:3px solid color(50);background:#4FAF59;border-radius:50%;}
+        }
+        h4{font-size:16px;margin: 0; @include text-overflow();}
+        a{color:color(900);&:hover{color:color(500);}}
+        span{color:color(200); font-size:12px;}
+    }
+    &__footer{
+      padding: 15px; border-top:1px solid #F7F8F9;
+      .btn{
+        &.btn-sm{
+          height: 35px; font-size:15px; padding:7px 5px;
+        }
+      }
+    }
+    @media (max-width:1599px){
+      &__top{
+        h4{font-size:15px;}
+      }
+    }
+    @media (max-width:1399px){
+      &__top{min-height:40px;padding-left: 70px;
+        .img{height: 40px;width: 40px;}
+        h4{font-size:14px;}
+      }
+    }
+}

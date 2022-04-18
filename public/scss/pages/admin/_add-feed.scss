@@ -1,0 +1,33 @@
+.addFeed{
+	&__inner{
+		max-width: 850px; padding:30px; margin-top: 50px;
+		.newsUpload{
+			width: calc(100% - 20%);height: 120px;border:2px dashed color(500); color:color(500);
+			font-family: font(sm); text-align: center;margin-bottom: 30px;border-radius: 5px;
+			transition:all 0.5s;
+			label{
+				cursor: pointer;
+				&:hover{border-color:lighten(color(500), 10%); color:lighten(color(500), 10%);}
+			}
+			i{
+				transform: rotate(-45deg); display: inline-block;margin-bottom: 10px;
+			}
+			&__img{max-width: 100%; max-height: 100%;}
+		}
+		.addMore{
+			margin:15px 0 30px;
+			a{color:color(600);font-family: font(md);}
+		}
+		.remove{
+			margin:15px 0 30px;
+			a{color:color(500);font-family: font(md);}
+		}
+
+		@media (max-width: 1599px){
+			margin-top: 20px;
+		}
+	}
+
+}
+
+

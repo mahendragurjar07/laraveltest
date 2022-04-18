@@ -1,0 +1,94 @@
+.modal-backdrop.show {
+  opacity: 0.40;
+}
+
+.fade {
+  visibility: hidden;
+  @include transition(all 0.3s);
+  .modal-content {
+    @include scale(0.7);
+    opacity: 0;
+    @include transition(all 0.3s);
+    border: 0;
+  }
+  &.show {
+    visibility: visible;
+    .modal-content {
+      @include scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.modal-default{
+  @include media-breakpoint-up(xs) {
+    max-width: 460px;
+  }
+}
+.modal-md{
+  @include media-breakpoint-up(md) {
+    max-width: 800px;
+  }
+}
+.modal-sm{
+  @include media-breakpoint-up(md) {
+    max-width:625px;
+  }
+}
+.videoModal{
+  .modal-header{
+     .close{
+        position: absolute;right: -15px;background-color: color(500);height: 40px;width: 40px;
+        @include box-shadow(0,0,10px,rgba(color(900),0.24));top: -15px;border-radius: 50%;cursor: pointer;z-index: 5;color: color(50) !important;font-size: 15px !important;text-shadow: none;
+        @include flexcenter();
+
+     }
+  }
+}
+.adminModal{
+  .modal-content{border-radius: 5px;}
+  .modal-header{
+    padding:20px 20px 30px; border-bottom: 0;
+    .close{
+      font-size: 18px;color:#A1A1A2; opacity: 1; transition:all 1s; 
+      margin:0; margin-left: auto; padding:0;
+      &:hover{transform: rotate(360deg);}
+    }
+  }
+  .modal-title{font-family:font(bd); font-size: 22px;}
+  .modal-body{
+    padding: 0 20px 30px;
+    .btn-danger{margin-top: 40px;}
+  }
+
+  @media (max-width: 1599px) {
+    .modal-title{font-size: 20px;}
+  }
+
+  @include media-breakpoint-down(sm) {
+    .modal-header{padding:10px; .close{font-size: 12px;}}
+    .modal-title{margin-bottom: 15px; font-size: 18px;}
+    .modal-body{
+      padding:0 30px 30px;
+      .btn-success{margin-top: 25px;} 
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .modal-body{padding-left:20px; padding-right: 20px;}
+  }
+
+}
+
+
+// admin 
+
+@import 'admin-add-specialty';
+@import 'patient-payment';
+@import 'patient-comments';
+@import 'patient-emergency-sos';
+@import 'patient-switch-account';
+@import 'patient-feedback';
+@import 'patient-incoming-call';
+
+
+

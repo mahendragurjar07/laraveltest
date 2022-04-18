@@ -1,0 +1,102 @@
+// Ripple Effect
+.ripple-effect-dark,
+.ripple-effect {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.ripple-effect span.ripple-overlay,
+.ripple-effect-dark span.ripple-overlay {
+  animation: ripple 0.9s;
+  border-radius: 100%;
+  background: #fff;
+  height: 12px;
+  position: absolute;
+  width: 12px;
+  line-height: 12px;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ripple-effect-dark span.ripple-overlay {
+  background: #000;
+  opacity: 0.07;
+}
+
+// admin main
+
+.admin-main{
+    margin-left:300px;padding-top: 100px;
+    @media (max-width: 1599px){
+        margin-left: 260px; padding-top: 70px;
+   }
+    @include media-breakpoint-down(lg) {
+        margin-left: 0px;padding-top:70px;
+   }
+    @include media-breakpoint-down(md) {
+        padding-top: 60px;
+    }
+    @include media-breakpoint-down(xs) {
+        padding-top: 50px;
+    }
+}
+
+.admin_pageContent{
+    padding:40px 50px;
+    @media (max-width: 1599px) {
+        padding: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding:15px;
+    }
+}
+
+// daterangepicker
+
+.daterangepicker {
+  .calendar-table{
+    td{
+      &.in-range{
+        background-color: #e6f5e7;
+      }
+      &.active {
+        background-color:color(500);
+        &:hover{background-color:color(500);}
+      }
+    }
+  }
+  .drp-buttons{
+    .btn{display: inline-block;}
+  }
+}
+
+.customContainer{
+  @media(min-width: 1500px){
+    max-width: 1400px
+  }
+
+}
+//box-heading
+.boxHeading{
+  margin-bottom:20px;
+  h4{font-size:17px; font-family:font(bd); margin: 0;}
+  .viewAll{color: color(100);
+    &:hover{color:color(500);}
+  }
+  @media (max-width:1399px){
+    margin-bottom: 15px;
+  }
+}
+//filterbutton
+.filterBtn-patient{
+  height: 55px; width: 55px; background:#FFF3F5; color:color(500); @include box-shadow(0,0,31px,rgba(color(900),0.1));
+  font-size:20px;
+  &:hover,&:focus{
+    background:color(500); color:color(50);
+  }
+  @media (max-width:1599px){
+    height: 45px;width: 45px; font-size:18px;
+  }
+}
