@@ -13,7 +13,7 @@ class QuestionRepository {
     public static function export($request){
         try{
             $report = Questions::with(['exam'])->orderBy('exam_id')->get();
-            $fileName = 'schools';
+            $fileName = 'exam-export-file';
             
             return Excel::download(new ExamExport($report), $fileName . '.xls');
         }catch(\Exception $ex){
